@@ -1,13 +1,16 @@
 Cache Control Image Assets in rails development
 ===================
+原理见 http://code.eoe.cn/6/title/Unicorn和Nginx部署Rails应用的css__js__img等静态资源缓存使用总结
 
 
 ## Usage
-1.   Add it to Gemfile
+* Add it to Gemfile
+
 ```ruby
 gem 'rack_image_assets_cache_control'
 ```
-2.   setup in config/environments/development.rb
+* setup in config/environments/development.rb
+
 ```ruby
   config.middleware.use(Rack::ImageAssetsCacheControl)
 ```
