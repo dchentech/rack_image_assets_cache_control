@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.email       = 'mvjome@gmail.com'
   s.homepage    = 'https://github.com/eoecn/image_assets_cache_control'
   s.require_paths = ["lib"]
+  s.add_dependency "rack"
 
   s.files = `git ls-files`.split("\n")
 end
