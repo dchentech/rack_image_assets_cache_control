@@ -1,5 +1,7 @@
 module Rack
   class ImageAssetsCacheControl
+    require 'mime/types'
+
     ImagePostfixRegexp = Regexp.new(
       MIME::Types.to_a.select {|t| t.media_type == 'image' }.map {|i| i.raw_sub_type }.reject {|i| i.match(/\.|\-|\+/) }.map {|i| "\.#{i}" }.join("|"),
       'i'
